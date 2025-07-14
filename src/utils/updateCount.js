@@ -1,5 +1,5 @@
 import { ref, set } from 'firebase/database';
-import database from './firebaseConfig.js';
+import database from '../../firebaseConfig.js';
 
 export function updateVehicleCount(count) {
 	const now = new Date();

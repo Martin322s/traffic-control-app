@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { loadModel } from "../services/tfModel";
 import { euclidean } from "../utils/tracker";
+import { updateVehicleCount } from "../utils/updateCount";
 
 export function useTrafficCounter(canvasRef, imgRef, options = {}) {
 	const topIgnoreY = options.topIgnoreY || 150;
@@ -94,6 +95,12 @@ export function useTrafficCounter(canvasRef, imgRef, options = {}) {
 			clearInterval(interval);
 		};
 	}, [topIgnoreY, maxDist, maxLost, frameMs]);
+
+	useEffect(() => {
+		if (count > 0) {
+			updateVehicleCount(count);
+		}
+	}, [count]);
 
 	return count;
 }
