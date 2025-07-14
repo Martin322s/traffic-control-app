@@ -42,7 +42,7 @@ export default function VideoCanvas() {
 					<div className={styles.videoContainer}>
 						<img
 							ref={imgRef}
-							src="/cam/mjpg/video.mjpg?camera=1"
+							src="https://camera-proxy-server-211m.onrender.com/cam"
 							alt="Видео поток от камерата"
 							className={styles.hiddenImage}
 						/>
