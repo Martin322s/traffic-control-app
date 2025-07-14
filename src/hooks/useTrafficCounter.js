@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { loadModel } from "../services/tfModel";
 import { euclidean } from "../utils/tracker";
 import { updateVehicleCount } from "../utils/updateCount";
+import { useMidnightReset } from "./useMidnightReset";
 
 export function useTrafficCounter(canvasRef, imgRef, options = {}) {
 	const topIgnoreY = options.topIgnoreY || 150;
@@ -10,6 +11,7 @@ export function useTrafficCounter(canvasRef, imgRef, options = {}) {
 	const frameMs = options.frameMs || 1000;
 
 	const [count, setCount] = useState(0);
+	useMidnightReset(setCount);
 	const objectsRef = useRef(new Map());
 	const nextIdRef = useRef(0);
 
