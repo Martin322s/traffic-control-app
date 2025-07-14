@@ -43,8 +43,9 @@ export default function VideoCanvas() {
 						<img
 							ref={imgRef}
 							src="https://camera-proxy-server-211m.onrender.com/cam"
-							alt="Видео поток от камерата"
-							className={styles.hiddenImage}
+							crossOrigin="anonymous"
+							alt="stream"
+							style={{ display: "none" }}
 						/>
 						<canvas
 							ref={canvasRef}
