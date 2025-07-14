@@ -1,0 +1,398 @@
+/* Основен контейнер */
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 2rem;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	min-height: 100vh;
+	color: #333;
+}
+
+/* Хедър секция */
+.header {
+	text-align: center;
+	margin-bottom: 3rem;
+	padding: 2rem;
+	background: rgba(255, 255, 255, 0.95);
+	border-radius: 20px;
+	backdrop-filter: blur(10px);
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin: 0 0 1rem 0;
+	background: linear-gradient(45deg, #667eea, #764ba2);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+.subtitle {
+	font-size: 1.1rem;
+	color: #666;
+	margin: 0;
+	font-weight: 400;
+}
+
+/* Главно съдържание */
+.mainContent {
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: 1fr;
+}
+
+/* Статистики карта */
+.statsCard {
+	background: rgba(255, 255, 255, 0.95);
+	border-radius: 16px;
+	padding: 2rem;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(10px);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.statItem {
+	text-align: center;
+}
+
+.statNumber {
+	font-size: 3rem;
+	font-weight: 800;
+	color: #4CAF50;
+	margin-bottom: 0.5rem;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.statLabel {
+	font-size: 1rem;
+	color: #666;
+	font-weight: 500;
+}
+
+.statusIndicator {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.5rem 1rem;
+	background: rgba(76, 175, 80, 0.1);
+	border-radius: 25px;
+	border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.statusDot {
+	width: 8px;
+	height: 8px;
+	background: #4CAF50;
+	border-radius: 50%;
+	animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+
+	0%,
+	100% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0.5;
+	}
+}
+
+.statusText {
+	font-size: 0.9rem;
+	color: #4CAF50;
+	font-weight: 500;
+}
+
+/* Видео секция */
+.videoSection {
+	background: rgba(255, 255, 255, 0.95);
+	border-radius: 16px;
+	padding: 2rem;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(10px);
+	text-align: center;
+}
+
+.sectionTitle {
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin: 0 0 1.5rem 0;
+	color: #333;
+}
+
+.videoContainer {
+	position: relative;
+	display: inline-block;
+	border-radius: 12px;
+	overflow: hidden;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hiddenImage {
+	display: none;
+}
+
+.videoCanvas {
+	display: block;
+	width: 100%;
+	height: auto;
+	max-width: 640px;
+	background: #000;
+}
+
+.videoOverlay {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	background: rgba(0, 0, 0, 0.8);
+	color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 6px;
+	font-size: 0.8rem;
+	font-weight: 600;
+}
+
+.recordingIndicator {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.recordingDot {
+	width: 8px;
+	height: 8px;
+	background: #f44336;
+	border-radius: 50%;
+	animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+	0%,
+	50% {
+		opacity: 1;
+	}
+
+	51%,
+	100% {
+		opacity: 0;
+	}
+}
+
+/* Действия секция */
+.actionsSection {
+	display: flex;
+	justify-content: center;
+	padding: 1rem;
+}
+
+.exportButton {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	padding: 1rem 2rem;
+	background: linear-gradient(45deg, #4CAF50, #45a049);
+	color: white;
+	border: none;
+	border-radius: 12px;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.exportButton:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+}
+
+.exportButton:active {
+	transform: translateY(0);
+}
+
+.buttonIcon {
+	font-size: 1.2rem;
+}
+
+.buttonSubtext {
+	font-size: 0.85rem;
+	opacity: 0.9;
+	font-weight: 400;
+}
+
+/* История секция */
+.historySection {
+	background: rgba(255, 255, 255, 0.95);
+	border-radius: 16px;
+	padding: 2rem;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(10px);
+}
+
+.tableContainer {
+	overflow-x: auto;
+	border-radius: 12px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.historyTable {
+	width: 100%;
+	border-collapse: collapse;
+	background: white;
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+.historyTable thead {
+	background: linear-gradient(45deg, #667eea, #764ba2);
+	color: white;
+}
+
+.historyTable th,
+.historyTable td {
+	padding: 1rem;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.historyTable th {
+	font-weight: 600;
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.historyTable th:first-child,
+.historyTable td:first-child {
+	text-align: left;
+}
+
+.historyTable th:nth-child(2),
+.historyTable td:nth-child(2) {
+	text-align: center;
+}
+
+.historyTable th:last-child,
+.historyTable td:last-child {
+	text-align: center;
+}
+
+.historyTable tbody tr {
+	transition: background-color 0.2s ease;
+}
+
+.historyTable tbody tr:hover {
+	background: rgba(102, 126, 234, 0.05);
+}
+
+.dateCell {
+	font-weight: 500;
+	color: #333;
+}
+
+.dateText {
+	font-size: 0.95rem;
+}
+
+.countCell {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.countNumber {
+	display: inline-block;
+	padding: 0.25rem 0.75rem;
+	background: linear-gradient(45deg, #4CAF50, #45a049);
+	color: white;
+	border-radius: 20px;
+	font-weight: 600;
+	font-size: 0.9rem;
+}
+
+.statusCell {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.statusBadge {
+	display: inline-block;
+	padding: 0.25rem 0.75rem;
+	border-radius: 20px;
+	font-size: 0.8rem;
+	font-weight: 500;
+	background: #4CAF50;
+	color: white;
+}
+
+.statusBadge:contains("Неактивен") {
+	background: #f44336;
+}
+
+/* Responsive дизайн */
+@media (max-width: 768px) {
+	.container {
+		padding: 1rem;
+	}
+
+	.title {
+		font-size: 2rem;
+	}
+
+	.statsCard {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.statNumber {
+		font-size: 2.5rem;
+	}
+
+	.videoContainer {
+		width: 100%;
+	}
+
+	.videoCanvas {
+		width: 100%;
+		height: auto;
+	}
+
+	.exportButton {
+		padding: 0.75rem 1.5rem;
+		font-size: 0.9rem;
+	}
+
+	.historyTable th,
+	.historyTable td {
+		padding: 0.75rem 0.5rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.title {
+		font-size: 1.5rem;
+	}
+
+	.subtitle {
+		font-size: 1rem;
+	}
+
+	.statNumber {
+		font-size: 2rem;
+	}
+
+	.exportButton {
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+}
