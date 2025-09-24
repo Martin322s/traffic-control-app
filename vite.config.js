@@ -5,6 +5,9 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
 	plugins: [react()],
 	server: {
+		hmr: {
+			clientPort: 5173,
+		},
 		proxy: {
 			"/cam": {
 				target: "http://212.112.136.4:83",
