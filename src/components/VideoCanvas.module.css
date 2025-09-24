@@ -89,9 +89,17 @@
 .statusDot {
 	width: 8px;
 	height: 8px;
-	background: #4CAF50;
 	border-radius: 50%;
+}
+
+.statusDot.active {
+	background: #4CAF50;
 	animation: pulse 2s infinite;
+}
+
+.statusDot.inactive {
+	background: #ff9800;
+	animation: blink 1s infinite;
 }
 
 @keyframes pulse {
@@ -170,9 +178,54 @@
 .recordingDot {
 	width: 8px;
 	height: 8px;
-	background: #f44336;
 	border-radius: 50%;
+}
+
+.recordingDot.recording {
+	background: #f44336;
 	animation: blink 1s infinite;
+}
+
+.recordingDot.paused {
+	background: #ff9800;
+}
+
+/* Грешка карта */
+.errorCard {
+	background: rgba(244, 67, 54, 0.1);
+	border: 1px solid rgba(244, 67, 54, 0.3);
+	border-radius: 16px;
+	padding: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+.errorCard h3 {
+	color: #f44336;
+	margin: 0 0 1rem 0;
+	font-size: 1.1rem;
+}
+
+.errorCard p {
+	color: #d32f2f;
+	margin: 0.5rem 0;
+	font-size: 0.9rem;
+}
+
+/* Debug информация */
+.debugInfo {
+	position: absolute;
+	bottom: 1rem;
+	left: 1rem;
+	background: rgba(0, 0, 0, 0.8);
+	color: white;
+	padding: 0.5rem;
+	border-radius: 6px;
+	font-size: 0.8rem;
+	font-family: monospace;
+}
+
+.debugInfo div {
+	margin: 2px 0;
 }
 
 @keyframes blink {
