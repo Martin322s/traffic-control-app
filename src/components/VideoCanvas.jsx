@@ -89,7 +89,7 @@ export default function VideoCanvas() {
 					<div className={styles.videoContainer}>
 						<img
 							ref={imgRef}
-							src="https://camera-proxy-server-211m.onrender.com/cam"
+							src="http://64.191.148.57/mjpg/video.mjpg"
 							crossOrigin="anonymous"
 							alt="stream"
 							style={{ display: "none" }}
